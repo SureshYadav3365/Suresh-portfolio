@@ -1,0 +1,208 @@
+.contact-section {
+  position: relative;
+  padding-bottom: 3.5rem;
+}
+
+.contact-editorial-card {
+  background-color: #0E0E12;
+  border: 1px solid var(--border-line);
+  padding: 4.5rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  position: relative;
+  transition: border-color 0.3s ease;
+}
+
+.contact-editorial-card:hover {
+  border-color: rgba(199, 255, 77, 0.35);
+}
+
+.contact-content-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 840px;
+}
+
+.contact-overhead-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-lime);
+  letter-spacing: 0.12em;
+}
+
+.contact-headline {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  text-transform: uppercase;
+}
+
+.contact-supporting-text {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Email Block */
+.contact-email-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.contact-email-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: clamp(1.15rem, 2.5vw, 1.85rem);
+  font-weight: 600;
+  color: var(--accent-lime);
+  text-decoration: none;
+  border-bottom: 2px solid var(--accent-lime);
+  padding-bottom: 0.25rem;
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.contact-email-link:hover {
+  color: var(--accent-lime-hover);
+  border-bottom-color: var(--accent-lime-hover);
+  transform: translateX(4px);
+}
+
+.email-arrow {
+  font-size: 1.25em;
+  transition: transform 0.2s ease;
+}
+
+.contact-email-link:hover .email-arrow {
+  transform: translate(3px, -3px);
+}
+
+.btn-copy-email {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  background-color: rgba(245, 245, 242, 0.04);
+  border: 1px solid var(--border-line);
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-copy-email:hover {
+  border-color: var(--accent-lime);
+  color: var(--accent-lime);
+  background-color: var(--accent-lime-subtle);
+}
+
+/* Matrix Grid */
+.contact-matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border-line);
+}
+
+.matrix-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.matrix-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+}
+
+.matrix-value {
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.matrix-value.matrix-lime {
+  color: var(--accent-lime);
+}
+
+/* Footer */
+.editorial-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 4rem;
+  margin-top: 2rem;
+  border-top: 1px solid var(--border-line);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.footer-brand {
+  color: var(--text-secondary);
+  letter-spacing: 0.08em;
+}
+
+.footer-sep {
+  color: var(--border-line);
+}
+
+.footer-year {
+  color: var(--accent-lime);
+}
+
+.footer-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: 0.08em;
+}
+
+.footer-dot-lime {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--accent-lime);
+  box-shadow: 0 0 8px var(--accent-lime);
+}
+
+@media (max-width: 768px) {
+  .contact-editorial-card {
+    padding: 2.5rem 1.5rem;
+    gap: 2.5rem;
+  }
+  .contact-email-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .btn-copy-email {
+    width: 100%;
+    text-align: center;
+  }
+  .editorial-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
